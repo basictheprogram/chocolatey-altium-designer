@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>altium-designer</id>
+    <version>17.1.9.592</version>
+    <packageSourceUrl>http://www.altium.com</packageSourceUrl>
+    <owners>basictheprogram</owners>
+    <title>Altium Designer</title>
+    <authors>Altium LLC</authors>
+    <projectUrl>https://github.com/basictheprogram/chocolatey-altium-designer</projectUrl>
+    <iconUrl>https://basictheprogram.github.io/chocolatey-altium-designer/icons/altium-designer.png</iconUrl>
+    <copyright>2017</copyright>
+    <licenseUrl>http://www.altium.com/altium-designer/licensing</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <docsUrl>http://www.altium.com/documentation</docsUrl>
+    <mailingListUrl>https://forum.live.altium.com</mailingListUrl>
+    <bugTrackerUrl>https://bugcrunch.live.altium.com</bugTrackerUrl>
+    <tags>altium designer</tags>
+    <summary>High Performance PCB design tool</summary>
+    <description>Altium Designer continues its focus on delivering new, easy-to-use and performance-enhancing 
+PCB design tools as part of one single price solution with the introduction of the latest 
+version.
+  * Easy
+    Experience the most cohesive, user-friendly interface for you to achieve productivity right “out of the box”.
+  * Powerful
+    Attain the power you need to complete large, complex designs – quickly and accurately.
+  * Modern
+    Get the latest design tools today with the guarantee of continuous innovation in the future – year after year.</description>
+    <releaseNotes>http://www.altium.com/altium-designer/whats-new</releaseNotes>
+  <dependencies> 
+    <dependency id="autoit" version="3.3" />
+  </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
