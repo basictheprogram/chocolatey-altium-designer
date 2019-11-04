@@ -2,17 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>altium-designer</id>
-    <version>17.1.9.592</version>
+    <version>19.1.8.144</version>
     <packageSourceUrl>http://www.altium.com</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>Altium Designer</title>
     <authors>Altium LLC</authors>
     <projectUrl>https://github.com/basictheprogram/chocolatey-altium-designer</projectUrl>
     <iconUrl>https://basictheprogram.github.io/chocolatey-altium-designer/icons/altium-designer.png</iconUrl>
-    <copyright>2017</copyright>
+    <copyright>2019</copyright>
     <licenseUrl>http://www.altium.com/altium-designer/licensing</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
     <docsUrl>http://www.altium.com/documentation</docsUrl>
     <mailingListUrl>https://forum.live.altium.com</mailingListUrl>
     <bugTrackerUrl>https://bugcrunch.live.altium.com</bugTrackerUrl>

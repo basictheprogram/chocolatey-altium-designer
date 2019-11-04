@@ -1,51 +1,69 @@
+Const $text = "Altium Designer 19 Installer"
+
 Func Install($config)
     Local $install = $config.Item("install")
+    ConsoleWrite("Install: " & $install & @LF)
+
     ; Run installation program
     Run($install)
- 
+
     ; Welcome to Altium Designer Installer
     ;
-    WinWaitActive("Altium Designer 17 Installer")
+	ConsoleWrite("Welcome" & @LF)
+    WinWaitActive($text)
+	Sleep(1000)
     Send("!n")
 
     ; License Agreement
     ;
-    WinWaitActive("Altium Designer 17 Installer", "English")
-    ControlCommand("Altium Designer 17 Installer", "", "[CLASS:TXPRadioButton; INSTANCE:1]", "Check", "")
+	ConsoleWrite("License" & @LF)
+    WinWait($text, "ALTIUM LLC END-USER LICENSE AGREEMENT")
+    ControlCommand($text, "", "[CLASS:TXPRadioButton; INSTANCE:1]", "Check", "")
+	Sleep(1000)
     Send("!n")
 
     ; Log In
     ;
-    WinWait("", "Login")
-    Send("")
-    Send("{TAB}")
-    Send("")
-    Send("{TAB}")
-    Send("{Enter}")
+	;ConsoleWrite("Login" & @LF)
+    ;WinWait("[CLASS:TSignInForm]", "Login")
+    ;Send("licensing@celadonsystems.com")
+    ;Send("{TAB}")
+    ;Send("^o?7J^:S", 1)
+    ;Send("{TAB}")
+    ;Send("{Enter}")
 
     ; Select Design Functionality
     ;
+	ConsoleWrite("Select Design Functionality" & @LF)
+    WinWait($text, "Next")
     Send("!n")
- 
+
     ; Destination Folders
-    ;
+	ConsoleWrite("Destination Folders" & @LF)
+	WinWait($text, "Program Files")
     Send("!n")
 
     ; Ready To Install
-    Send("!n")
- 
-    ; Installation Complete
-    WinWait("Altium Designer 17 Installer", "Installation Complete")
+	ConsoleWrite("Ready To Install" & @LF)
+	WinWait($text, "Next")
     Send("!n")
 
-    WinClose("Altium Designer 17 Install!")
+    ; Installation Complete
+	WinWait($text, "Run Altium Designer")
+    ;ControlCommand($text, "", "[CLASS:TXPCheckBox; INSTANCE:1]", "UnCheck", "")
+	Send("!r")
+	ConsoleWrite("Complete" & @LF)
+    Send("!f")
+	ConsoleWrite("Finish" & @LF)
+
+    WinClose($text)
  EndFunc
- 
-; Q: Why are you using AutoIt! to install Altium Designer?
-; A: https://techdocs.altium.com/display/ALEG/Altium+Designer+Installation+-+FAQs#AltiumDesignerInstallation-FAQs-Isitpossibletouseasilent/scriptedinstallationsotheITdepartmentcaninstallAltiumDesignercomfortableonmultiplePCs?
-;
- Local $config = ObjCreate("Scripting.Dictionary")
- $config.Add("install", $CmdLine[1])
- 
- Install($config)
- ConsoleWrite("End of AutoIt Script!" & @LF)
+
+ConsoleWrite("Starting" & @LF)
+
+Local $config = ObjCreate("Scripting.Dictionary")
+$config.Add("install", $CmdLine[1])
+
+#RequireAdmin
+Install($config)
+ConsoleWrite("End of Install!" & @LF)
