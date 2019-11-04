@@ -3,13 +3,13 @@
   <metadata>
     <id>altium-designer</id>
     <version>19.1.8.144</version>
-    <packageSourceUrl>http://www.altium.com</packageSourceUrl>
+    <packageSourceUrl>https://github.com/basictheprogram/chocolatey-altium-designer/tree/2019</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>Altium Designer</title>
     <authors>Altium LLC</authors>
-    <projectUrl>https://github.com/basictheprogram/chocolatey-altium-designer</projectUrl>
+    <projectUrl>http://www.altium.com/products/downloads</projectUrl>
     <iconUrl>https://basictheprogram.github.io/chocolatey-altium-designer/icons/altium-designer.png</iconUrl>
-    <copyright>2019</copyright>
+    <copyright>© 2019</copyright>
     <licenseUrl>http://www.altium.com/altium-designer/licensing</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.altium.com/documentation</docsUrl>
