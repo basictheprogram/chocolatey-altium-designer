@@ -1,17 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'; 
 
-# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/OfflineSetup_Altium_Designer_Public_19_1_8.zip
-# altium_designer_offline_installer_19_1_8.zip
-# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/OfflineSetup_Altium_Designer_Public_19_1_8.zip?response-content-disposition=attachment;%20filename=%22altium_designer_offline_installer_19_1_8.zip%22&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAI5TSRXSMZE33ALGA/20191017/us-east-1/s3/aws4_request&X-Amz-Date=20191017T175959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d1524ba989315041d071f1d2885a046a23fd59a638ad050ed44dbe5750c9ae67
+# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_18/OfflineSetup_Altium_Designer_Public_18_1_9.zip
 
 $packageName = $env:ChocolateyPackageName
-#$fullPackage = "AltiumDesignerSetup_19_1_8.exe"
-#$url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/' + $fullPackage
-#$checksum64 = '0b3b206090b4c6b51544090404487901dc9af7ed7b9322835ccfe76c6eaf7c61'
-
-$fullPackage = "OfflineSetup_Altium_Designer_Public_19_1_8.zip"
-$url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/' + $fullPackage
-$checksum64 = '24ae930e4c02bc6b6228fdde9ad28fdf6756bed9da636ecec4aafeeb62519791'
+$fullPackage = "OfflineSetup_Altium_Designer_Public_18_1_9.zip"
+$url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_18/' + $fullPackage
+$checksum64 = 'dff77a418c7257bf1a2c0fc8515938e4e1320e24eb89d16e7a112f57ea836bcf'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
