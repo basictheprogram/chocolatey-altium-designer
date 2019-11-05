@@ -11,7 +11,7 @@ $packageName = $env:ChocolateyPackageName
 
 $fullPackage = "OfflineSetup_Altium_Designer_Public_19_1_8.zip"
 $url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/' + $fullPackage
-$checksum64 = '24ae930e4c02bc6b6228fdde9ad28fdf6756bed9da636ecec4aafeeb62519791'
+$checksum64 = 'a6f4bb27539d0f28d946b0b9c79351f93925036ee304c9c0b794a3e6a406fd19'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
