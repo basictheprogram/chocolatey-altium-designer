@@ -1,4 +1,4 @@
-Const $text = "Altium Designer 19 Installer"
+Const $text = "Altium Designer 18 Installer"
 
 Func Uninstall($config)
     Local $uninstall = $config.Item("uninstall")
