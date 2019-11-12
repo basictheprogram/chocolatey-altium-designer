@@ -1,3 +1,4 @@
 *.nupkg
 *.msi
 *.exe
+*.bat
