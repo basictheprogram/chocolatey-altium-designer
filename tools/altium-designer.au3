@@ -1,4 +1,4 @@
-Const $text = "Altium Designer 19 Installer"
+Const $text = "Altium Designer 20 Installer"
 
 Func Install($config)
     Local $install = $config.Item("install")
@@ -22,16 +22,6 @@ Func Install($config)
 	Sleep(1000)
     Send("!n")
 
-    ; Log In
-    ;
-	;ConsoleWrite("Login" & @LF)
-    ;WinWait("[CLASS:TSignInForm]", "Login")
-    ;Send("licensing@celadonsystems.com")
-    ;Send("{TAB}")
-    ;Send("^o?7J^:S", 1)
-    ;Send("{TAB}")
-    ;Send("{Enter}")
-
     ; Select Design Functionality
     ;
 	ConsoleWrite("Select Design Functionality" & @LF)
@@ -43,8 +33,15 @@ Func Install($config)
 	WinWait($text, "Program Files")
     Send("!n")
 
+    ; Customer Experience Improvement Program
+    ConsoleWrite("Customer Experience Improvement Program" & @LF)
+    WinWait($text, "Altium Customer Experience Improvement Program")
+    ControlCommand($text, "", "[CLASS:TXPRadioButton; INSTANCE:2]", "Check", "")
+    Sleep(1000)
+    Send("!n")
+
     ; Ready To Install
-	ConsoleWrite("Ready To Install" & @LF)
+	ConsoleWrite("Advanced..." & @LF)
 	WinWait($text, "Next")
     Send("!n")
 

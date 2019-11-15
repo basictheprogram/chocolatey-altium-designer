@@ -2,20 +2,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>altium-designer</id>
-    <version>19.1.8.144</version>
+    <version>20.0.7</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-altium-designer/tree/2019</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>Altium Designer</title>
     <authors>Altium LLC</authors>
     <projectUrl>http://www.altium.com/products/downloads</projectUrl>
     <iconUrl>https://basictheprogram.github.io/chocolatey-altium-designer/icons/altium-designer.png</iconUrl>
-    <copyright>© 2019</copyright>
+    <copyright>https://www.altium.com/copyrights-and-trademarks/</copyright>
     <licenseUrl>http://www.altium.com/altium-designer/licensing</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.altium.com/documentation</docsUrl>
     <mailingListUrl>https://forum.live.altium.com</mailingListUrl>
     <bugTrackerUrl>https://bugcrunch.live.altium.com</bugTrackerUrl>
-    <tags>altium designer</tags>
+    <tags>altium designer PCB</tags>
     <summary>High Performance PCB design tool</summary>
     <description>Altium Designer continues its focus on delivering new, easy-to-use and performance-enhancing 
 PCB design tools as part of one single price solution with the introduction of the latest 
@@ -29,6 +29,8 @@ version.
     <releaseNotes>http://www.altium.com/altium-designer/whats-new</releaseNotes>
   <dependencies> 
     <dependency id="autoit" version="3.3" />
+    <dependency id="dotnet4.6.1" version="4.6" />
+    <dependency id="kb2919355" version="1.0" />
   </dependencies>
   </metadata>
   <files>
