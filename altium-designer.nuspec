@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>altium-designer</id>
-    <version>18.1.9</version>
+    <version>18.1.11</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-altium-designer/tree/2018</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>Altium Designer</title>
@@ -37,4 +37,3 @@ version.
     <file src="tools\**" target="tools" />
   </files>
 </package>
-

@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'; 
 
-# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_18/OfflineSetup_Altium_Designer_Public_18_1_9.zip
+# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_18/OfflineSetup_Altium_Designer_Public_18_1_11.zip
 
 $packageName = $env:ChocolateyPackageName
-$fullPackage = "OfflineSetup_Altium_Designer_Public_18_1_9.zip"
+$fullPackage = "OfflineSetup_Altium_Designer_Public_18_1_11.zip"
 $url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_18/' + $fullPackage
-$checksum64 = 'dff77a418c7257bf1a2c0fc8515938e4e1320e24eb89d16e7a112f57ea836bcf'
+$checksum64 = 'a78b546a1d9a346208eab3a36adc11a45896a0df148d95d0f5e5e23d8b78e869'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -29,7 +29,6 @@ $UnzipArgs = @{
 
 Get-ChocolateyUnzip @UnzipArgs
 
-
 # unattended install requires AutoIT
 #
 $autoitExe = 'C:\Program Files (x86)\AutoIt3\AutoIt3.exe'
@@ -40,5 +39,4 @@ Write-Debug "AutoIt: `t$autoitExe"
 Write-Debug "AutoItFile: `t$autoitFile"
 Write-Debug "FileFullPath `t$fileFullPath"
 
-#$autoitProc = Start-Process -FilePath $autoitExe -ArgumentList "$autoitFile $fileFullPath" -PassThru
 Start-ChocolateyProcessAsAdmin  -ExeToRun $autoitExe -Statements "$autoitFile $fileFullPath"

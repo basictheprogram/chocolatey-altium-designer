@@ -5,8 +5,7 @@ Func Uninstall($config)
     ConsoleWrite("XXX Uninstall: " & $uninstall & @LF)
 
     ; Run uninstallation program
-    ;local $pid = Run('C:\Program Files\Altium\AD19\System\Installation\AltiumInstaller.exe -Ufninstall -UniqueID:"{404E0CD4-F33F-4949-8A1C-936FEA2385B1}"')
-    local $pid = Run('C:\Program Files\Altium\AD19\System\Installation\AltiumInstaller.exe -Uninstall')
+    local $pid = Run('C:\Program Files\Altium\AD18\System\Installation\AltiumInstaller.exe -Uninstall')
 
     If $pid = 0 Then
 	   ConsoleWrite("Error: " & @error & @LF)
@@ -33,7 +32,7 @@ Func Uninstall($config)
 ConsoleWrite("Starting" & @LF)
 Local $config = ObjCreate("Scripting.Dictionary")
 ; $config.Add("uninstall", $CmdLine[1])
-$config.Add("uninstall", 'C:\Program Files\Altium\AD19\System\Installation\AltiumInstaller.exe -Uninstall')
+$config.Add("uninstall", 'C:\Program Files\Altium\AD18\System\Installation\AltiumInstaller.exe -Uninstall')
 
 #RequireAdmin
 Uninstall($config)

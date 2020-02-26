@@ -22,16 +22,6 @@ Func Install($config)
 	Sleep(1000)
     Send("!n")
 
-    ; Log In
-    ;
-	;ConsoleWrite("Login" & @LF)
-    ;WinWait("[CLASS:TSignInForm]", "Login")
-    ;Send("licensing@celadonsystems.com")
-    ;Send("{TAB}")
-    ;Send("^o?7J^:S", 1)
-    ;Send("{TAB}")
-    ;Send("{Enter}")
-
     ; Select Design Functionality
     ;
 	ConsoleWrite("Select Design Functionality" & @LF)
