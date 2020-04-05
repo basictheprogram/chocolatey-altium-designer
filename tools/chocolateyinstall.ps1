@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'; 
 
 $packageName = $env:ChocolateyPackageName
-$fullPackage = "OfflineSetup_Altium_Designer_Public_20_0_12.zip"
+$fullPackage = "OfflineSetup_Altium_Designer_Public_20_0_13.zip"
 $url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_20/' + $fullPackage
-$checksum64 = '5248f4dde12f6904797b4fe1086eb503392e0ce9ae2de7ba6b364b12a13dc47f'
+$checksum64 = '7aa979f9fd93d15e9e516482ad079af1fcb4d61df617b7c1d441ce632c1d4bd1'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
