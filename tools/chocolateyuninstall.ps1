@@ -4,11 +4,11 @@ $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  packageName  = $env:ChocolateyPackageName
-  softwareName = 'altium*'
-  #  fileType       = 'exe'
-  silentArgs   = ''
-  #  validExitCodes = @(0)
+    packageName  = $env:ChocolateyPackageName
+    softwareName = 'altium*'
+    #  fileType       = 'exe'
+    silentArgs   = ''
+    #  validExitCodes = @(0)
 }
 
 $autoitExe = 'C:\Program Files (x86)\AutoIt3\AutoIt3.exe'

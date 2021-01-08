@@ -1,4 +1,4 @@
-Const $text = "Altium Designer 20 Installer"
+Const $text = "Altium Designer 21 Installer"
 
 Func Install($config)
     Local $install = $config.Item("install")
