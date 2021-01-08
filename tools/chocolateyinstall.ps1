@@ -1,36 +1,30 @@
-﻿$ErrorActionPreference = 'Stop'; 
+﻿$ErrorActionPreference = 'Stop';
 
-# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/OfflineSetup_Altium_Designer_Public_19_1_8.zip
-# altium_designer_offline_installer_19_1_8.zip
-# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/OfflineSetup_Altium_Designer_Public_19_1_8.zip?response-content-disposition=attachment;%20filename=%22altium_designer_offline_installer_19_1_8.zip%22&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAI5TSRXSMZE33ALGA/20191017/us-east-1/s3/aws4_request&X-Amz-Date=20191017T175959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d1524ba989315041d071f1d2885a046a23fd59a638ad050ed44dbe5750c9ae67
-
+# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_21/OfflineSetup_Altium_Designer_Public_21_0_8.zip
+#
 $packageName = $env:ChocolateyPackageName
-#$fullPackage = "AltiumDesignerSetup_19_1_8.exe"
-#$url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/' + $fullPackage
-#$checksum64 = '0b3b206090b4c6b51544090404487901dc9af7ed7b9322835ccfe76c6eaf7c61'
-
-$fullPackage = "OfflineSetup_Altium_Designer_Public_19_1_8.zip"
-$url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_19/' + $fullPackage
-$checksum64 = 'a6f4bb27539d0f28d946b0b9c79351f93925036ee304c9c0b794a3e6a406fd19'
+$fullPackage = "OfflineSetup_Altium_Designer_Public_21_0_8.zip"
+$url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_21/' + $fullPackage
+$checksum64 = 'e12670cfb6ca764e0e6cc87f3e3ba2c2280764171e01e8d57f9485da858e3668'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $WebFileArgs = @{
-  packageName         = $packageName
-  FileFullPath        = Join-Path $WorkSpace $fullPackage
-  Url64bit            = $url64
-  Checksum64          = $checkSum64
-  ChecksumType        = 'sha256'
-  GetOriginalFileName = $true
+    packageName         = $packageName
+    FileFullPath        = Join-Path $WorkSpace $fullPackage
+    Url64bit            = $url64
+    Checksum64          = $checkSum64
+    ChecksumType        = 'sha256'
+    GetOriginalFileName = $true
 }
 
 $PackedInstaller = Get-ChocolateyWebFile @WebFileArgs
 
 $UnzipArgs = @{
-  PackageName  = $packageName
-  FileFullPath = $PackedInstaller
-  Destination  = $WorkSpace
+    PackageName  = $packageName
+    FileFullPath = $PackedInstaller
+    Destination  = $WorkSpace
 }
 
 Get-ChocolateyUnzip @UnzipArgs
@@ -40,11 +34,10 @@ Get-ChocolateyUnzip @UnzipArgs
 #
 $autoitExe = 'C:\Program Files (x86)\AutoIt3\AutoIt3.exe'
 $autoitFile = Join-Path $toolsDir 'altium-designer.au3'
-$fileFullPath = Join-Path $workSpace "AltiumDesigner19Setup.exe"
+$fileFullPath = Join-Path $workSpace "AltiumDesigner21Setup.exe"
 
 Write-Debug "AutoIt: `t$autoitExe"
 Write-Debug "AutoItFile: `t$autoitFile"
 Write-Debug "FileFullPath `t$fileFullPath"
 
-#$autoitProc = Start-Process -FilePath $autoitExe -ArgumentList "$autoitFile $fileFullPath" -PassThru
 Start-ChocolateyProcessAsAdmin  -ExeToRun $autoitExe -Statements "$autoitFile $fileFullPath"

@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>altium-designer</id>
-    <version>19.1.8.144</version>
-    <packageSourceUrl>https://github.com/basictheprogram/chocolatey-altium-designer/tree/2019</packageSourceUrl>
+    <version>21.0.8</version>
+    <packageSourceUrl>https://github.com/basictheprogram/chocolatey-altium-designer/tree/2021</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>Altium Designer</title>
     <authors>Altium LLC</authors>
@@ -15,10 +15,10 @@
     <docsUrl>http://www.altium.com/documentation</docsUrl>
     <mailingListUrl>https://forum.live.altium.com</mailingListUrl>
     <bugTrackerUrl>https://bugcrunch.live.altium.com</bugTrackerUrl>
-    <tags>altium designer</tags>
+    <tags>altium designer PCB</tags>
     <summary>High Performance PCB design tool</summary>
-    <description>Altium Designer continues its focus on delivering new, easy-to-use and performance-enhancing 
-PCB design tools as part of one single price solution with the introduction of the latest 
+    <description>Altium Designer continues its focus on delivering new, easy-to-use and performance-enhancing
+PCB design tools as part of one single price solution with the introduction of the latest
 version.
   * Easy
     Experience the most cohesive, user-friendly interface for you to achieve productivity right “out of the box”.
@@ -27,9 +27,9 @@ version.
   * Modern
     Get the latest design tools today with the guarantee of continuous innovation in the future – year after year.</description>
     <releaseNotes>http://www.altium.com/altium-designer/whats-new</releaseNotes>
-  <dependencies> 
+  <dependencies>
     <dependency id="autoit" version="3.3" />
-    <dependency id="dotnet4.6.1" version="4.6" />
+    <dependency id="dotnet" version="5.0" />
     <dependency id="kb2919355" version="1.0" />
   </dependencies>
   </metadata>
@@ -37,4 +37,3 @@ version.
     <file src="tools\**" target="tools" />
   </files>
 </package>
-
