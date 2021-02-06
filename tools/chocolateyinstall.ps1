@@ -1,11 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
 
+# Login as your altium.com user
+# Navigate to https://www.altium.com/products/downloads
+# Right side, you should see the Offline downloads
+#
+# https://s3.amazonaws.com/altium-release-manager/Altium_Designer_21/OfflineSetup_Altium_Designer_Public_21_1_0.zip
 # https://s3.amazonaws.com/altium-release-manager/Altium_Designer_21/OfflineSetup_Altium_Designer_Public_21_0_8.zip
 #
 $packageName = $env:ChocolateyPackageName
-$fullPackage = "OfflineSetup_Altium_Designer_Public_21_0_8.zip"
+$fullPackage = "OfflineSetup_Altium_Designer_Public_21_1_0.zip"
 $url64 = 'https://s3.amazonaws.com/altium-release-manager/Altium_Designer_21/' + $fullPackage
-$checksum64 = 'e12670cfb6ca764e0e6cc87f3e3ba2c2280764171e01e8d57f9485da858e3668'
+$checksum64 = '27be3b0db54bba4777ad03b0b08a284511a51e6caad362bb27ec78e508a19dec'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"

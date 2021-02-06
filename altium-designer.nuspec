@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>altium-designer</id>
-    <version>21.0.8</version>
+    <version>21.1.0.24</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-altium-designer/tree/2021</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>Altium Designer</title>
@@ -28,8 +28,8 @@ version.
     Get the latest design tools today with the guarantee of continuous innovation in the future – year after year.</description>
     <releaseNotes>http://www.altium.com/altium-designer/whats-new</releaseNotes>
   <dependencies>
-    <dependency id="autoit" version="3.3" />
-    <dependency id="dotnet" version="5.0" />
+    <dependency id="autoit" />
+    <dependency id="dotnet" />
     <dependency id="kb2919355" version="1.0" />
   </dependencies>
   </metadata>
