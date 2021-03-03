@@ -34,7 +34,7 @@ Get-ChocolateyUnzip @UnzipArgs
 #
 $autoitExe = 'C:\Program Files (x86)\AutoIt3\AutoIt3.exe'
 $autoitFile = Join-Path $toolsDir 'altium-designer.au3'
-$fileFullPath = Join-Path $workSpace "AltiumDesigner21Setup.exe"
+$fileFullPath = Join-Path $workSpace "AltiumDesigner20Setup.exe"
 
 Write-Debug "AutoIt: `t$autoitExe"
 Write-Debug "AutoItFile: `t$autoitFile"
